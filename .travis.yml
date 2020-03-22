@@ -2,20 +2,20 @@ sudo: required
 services:
     - docker
 before_install:
-    - docker build -t ranjanray/react-test -f ./client/Dockerfile.dev ./client
+    - docker build -t 683202/react-test -f ./client/Dockerfile.dev ./client
 scripts:
     # Run the test after running the container. --coverage makes sure that the test doesn't enter watch mode and returns with a status code.
-    - docker run -e CI=true ranjanray/react-test npm test -- --coverage
+    - docker run -e CI=true 683202/react-test npm test -- --coverage
 after_success:
     # create the production version of the apps.
-    - docker build -t ranjanray/multi-client ./client
-    - docker build -t ranjanray/multi-nginx ./nginx
-    - docker build -t ranjanray/multi-api ./server
-    - docker build -t ranjanray/multi-worker ./worker
+    - docker build -t 683202/multi-client ./client
+    - docker build -t 683202/multi-nginx ./nginx
+    - docker build -t 683202/multi-api ./server
+    - docker build -t 683202/multi-worker ./worker
     # login to docker hub.
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     # Now push all the app images to the docker hub.
-    - docker push ranjanray/multi-client
-    - docker push ranjanray/multi-nginx
-    - docker push ranjanray/multi-api
-    - docker push ranjanray/multi-worker
+    - docker push 683202/multi-client
+    - docker push 683202/multi-nginx
+    - docker push 683202/multi-api
+    - docker push 683202/multi-worker
