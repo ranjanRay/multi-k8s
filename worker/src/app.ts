@@ -17,3 +17,4 @@ subscriber.on('message', (channel, message) => {
 })
 
 subscriber.subscribe('insert')
+console.log(`subscribed to redis!`)

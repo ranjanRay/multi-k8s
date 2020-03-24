@@ -34,6 +34,7 @@ services:
             context: "./server"
         volumes: 
             - /app/node_modules
+            - /app/dist
             - ./server:/app
         environment: 
             - REDIS_HOST=redis
@@ -52,6 +53,7 @@ services:
             context: "./worker"
         volumes: 
             - /app/node_modules
+            - /app/dist
             - ./worker:/app
         environment: 
             - REDIS_HOST=redis
