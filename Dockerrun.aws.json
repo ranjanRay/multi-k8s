@@ -10,7 +10,7 @@
         },
         {
             "name": "server",
-            "image": "683202/multi-server",
+            "image": "683202/multi-api",
             "hostname": "api",
             "essential": false,
             "memory": 128
