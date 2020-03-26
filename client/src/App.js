@@ -23,7 +23,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React from Jason Bourne!!.
+          A simple front-end for fib calculator.
           </a>
         </header>
       </div>
