@@ -23,7 +23,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-          A simple front-end for fib calculator.
+          Fib calculator.
           </a>
         </header>
       </div>
