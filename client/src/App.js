@@ -23,7 +23,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-          Fib calculator.
+          Fib calculator version: Kubernetes!
           </a>
         </header>
       </div>
