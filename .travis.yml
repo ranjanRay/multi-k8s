@@ -21,7 +21,7 @@ before_install:
   - gcloud config set compute/zone asia-east1-a
   - gcloud container clusters get-credentials multi-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker build -t 683202/react-test -f ./client/Dockerfile.dev ./client/Dockerfile.dev
+  - docker build -t 683202/react-test -f ./client/Dockerfile.dev ./client
   # Just built the react-project for now as this is the only project with tests.
   # Other projects like nginx, server and worker will be built and pushed to the docker hub right away.
 script:
